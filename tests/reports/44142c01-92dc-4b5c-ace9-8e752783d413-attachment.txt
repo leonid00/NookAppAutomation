@@ -1,0 +1,1 @@
+Detected screen: com.bn.nook.reader.activities.ReaderActivity

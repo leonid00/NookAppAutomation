@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","45602","test_ums","tests","2026-04-20","passed","2026-04-20","","test_ums_screen","",""
+"","108","test_home","tests","2026-04-20","passed","2026-04-20","","test_home_screen","",""
+"","0","test_detect_current_screen","tests","2026-04-20","skipped","2026-04-20","","test_screen_detection","",""
+"","3265","test_open_book","tests","2026-04-20","passed","2026-04-20","","test_reader","",""
