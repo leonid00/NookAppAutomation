@@ -1,6 +1,5 @@
 from pages.base_page import BasePage
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from utils.device_screen import unlock_screen
 import subprocess
@@ -26,7 +25,7 @@ class UmsPage(BasePage):
         self.tap(self.CLOSE_BTN)
 
     def close_storage2(self):
-        print("🔌 Closing USB dialog...")
+        print("Closing USB dialog...")
 
         try:
             btn = safe_find(
@@ -34,19 +33,19 @@ class UmsPage(BasePage):
                 (AppiumBy.ID, "android:id/button1")
             )
             btn.click()
-            print("✅ Close clicked")
+            print("Close clicked")
 
         except Exception as e:
-            print(f"⚠️ Close failed: {e}")
+            print(f"Close failed: {e}")
 
             if is_ui_stable(self.driver):
                 try:
                     self.driver.back()
                     print("🔙 Back fallback used")
                 except:
-                    print("❌ Back failed")
+                    print("Back failed")
             else:
-                print("⚠️ Skipping back (UI unstable)")
+                print("Skipping back (UI unstable)")
 
     def wait_for_ums_screen(self, timeout=15):
         print("⏳ Waiting for USB mode screen...")
@@ -57,11 +56,11 @@ class UmsPage(BasePage):
                 print(f"Attempt {i+1}: {activity}")
 
                 if "MsgUMSActivity" in activity:
-                    print("✅ USB screen detected")
+                    print("USB screen detected")
                     return True
 
             except Exception as e:
-                print(f"⚠️ Driver issue: {e}")
+                print(f"Driver issue: {e}")
                 return False
 
             time.sleep(1)

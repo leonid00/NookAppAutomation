@@ -25,5 +25,5 @@ allure generate allure-results \
 echo "💾 Saving history for next run..."
 cp -r allure-report/history allure-history
 
-echo "🚀 Opening report..."
+echo "Opening report..."
 allure open allure-report
