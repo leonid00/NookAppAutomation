@@ -1,0 +1,13 @@
+# Nook App Automation
+
+Appium + Pytest automation framework with Excel-driven test execution and Allure reporting.
+
+## Features
+- Single device Appium automation
+- Excel-based test control
+- Reboot & home navigation support
+- Allure reporting
+
+## Run tests
+```bash
+pytest -s --alluredir=allure-results
