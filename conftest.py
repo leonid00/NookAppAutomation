@@ -4,8 +4,7 @@ from utils.excel_reader import get_runnable_test_ids
 from utils.device_actions import reboot_device
 import time, os
 from utils.navigation import go_to_home
-from appium.options.android import UiAutomator2Options
-
+from utils.page_manager import PageManager
 
 # ======================================================
 # EXCEL TEST FILTER
@@ -74,3 +73,7 @@ def driver(request):
         driver.quit()
     except Exception as e:
         print(f"driver quit ignored: {e}")
+
+@pytest.fixture(scope="function")
+def pages(driver):
+    return PageManager(driver)

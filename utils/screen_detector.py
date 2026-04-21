@@ -42,7 +42,7 @@ class ScreenDetector:
             return False
 
     # MAIN DETECTOR
-    def get_current_screen(self):
+    def get_current_screen11(self):
 
         try:
             activity = self.driver.current_activity
@@ -57,7 +57,7 @@ class ScreenDetector:
         except:
             return "DriverDead"
 
-    def get_current_screen2(self) -> str:
+    def get_current_screen(self) -> str:
         activity = self.get_current_activity()
 
         # =========================

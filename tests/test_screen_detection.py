@@ -1,6 +1,8 @@
+import pytest
+
 from utils.screen_detector import ScreenDetector
 
-
+@pytest.mark.test_id("TC008")
 def test_detect_current_screen(driver):
     detector = ScreenDetector(driver)
 
