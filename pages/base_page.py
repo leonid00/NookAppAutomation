@@ -4,6 +4,10 @@ from appium.webdriver.common.appiumby import AppiumBy
 
 class BasePage:
     def __init__(self, driver):
+        """
+
+        :rtype: None
+        """
         self.driver = driver
         self.wait = WebDriverWait(driver, 20)
 
