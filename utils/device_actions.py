@@ -76,3 +76,8 @@ def reboot_device():
     subprocess.run(['adb', 'reboot'])
     time.sleep(10)
    # wait_for_device_ready()
+
+def press_back():
+    subprocess.run(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_BACK'])
+    time.sleep(1)
+    print("Back key pressed")
