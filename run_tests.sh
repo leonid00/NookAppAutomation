@@ -6,7 +6,7 @@ rm -rf allure-results
 # IMPORTANT: we keep history folder
 mkdir -p allure-history
 
-echo "🧪 Running pytest..."
+echo "Running pytest..."
 pytest -s --alluredir=allure-results
 
 # Check results exist
@@ -15,14 +15,14 @@ if [ ! -d "allure-results" ] || [ -z "$(ls -A allure-results)" ]; then
     exit 1
 fi
 
-echo "📊 Generating Allure report with history..."
+echo "Generating Allure report with history..."
 
 allure generate allure-results \
   --clean \
   -o allure-report \
   --history-dir allure-history
 
-echo "💾 Saving history for next run..."
+echo "Saving history for next run..."
 cp -r allure-report/history allure-history
 
 echo "Opening report..."
