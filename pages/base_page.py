@@ -52,7 +52,7 @@ class BasePage:
     def finds(self, locator):
         return self.driver.find_elements(*locator)
 
-    def get_current_screen(self) -> str:
+    def get_current_screen22(self) -> str:
         screens = {
             "Library": [
                 (AppiumBy.ID, "bn.ereader:id/action_search"),
